@@ -1,5 +1,5 @@
 const mix = require('laravel-mix');
-
+const { resolve } = require('path');
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -11,7 +11,13 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .postCss('resources/css/app.css', 'public/css', [
-        //
-    ]);
+mix.setPublicPath('public')
+    .js('resources/scripts/main.js', 'build/bundle.js')
+    .sass('resources/styles/main.scss', 'build/bundle.css', {}, [
+        require('postcss-axis')
+    ])
+    .browserSync({proxy: 'localhost',
+                  files: ['resources/**/*'],
+    });
+
+mix.alias({'uikit-util': resolve(__dirname, 'node_modules/uikit/src/js/util')});

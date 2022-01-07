@@ -1,0 +1,69 @@
+ {% import _self as macros %}
+
+    {% set scope = {
+        menu: [
+            {
+                url: '/',
+                name: 'Реализованные проекты',
+            },
+            {
+                url: '/',
+                name: 'Новости',
+            },
+            {
+                url: '/',
+                name: 'Контакты',
+            },
+        ],
+        phone: '+7 (900) 900-90-90',
+    } %}
+
+ {% macro logo() %}
+     <a href="{{ route('home') }}">
+         <img
+             src="{{ 'images/logo.png' |asset }}"
+             alt="Загородый дом"
+         >
+     </a>
+ {% endmacro %}
+
+ {% macro phone(value) %}
+     <a class="PrimaryPhone"  href="tel:{{ value }}" >
+         <img
+             class="PrimaryPhone__icon"
+             src="{{ 'icons/phone.svg' |asset }}"
+             alt="Телефон"
+         >
+         {{ value }}
+     </a>
+ {% endmacro %}
+
+{% macro button() %}
+    <button type="button" class="Button Button--primary">
+        Оставить заявку
+    </button>
+{% endmacro %}
+
+ {% macro content(scope) %}
+     {% import _self as macros %}
+
+    <div class="Container Header">
+        <div class="Header__logo">
+            {{ macros.logo }}
+        </div>
+
+        {% include '@components/site-nav/site-nav.twig' with {
+            items: scope.menu,
+        } %}
+
+        <div class="Header__phone">
+            {{ macros.phone(scope.phone) }}
+        </div>
+        
+        <div class="Header__button">
+        {{ macros.button }}
+        </div>
+    </div>
+{% endmacro %}
+
+{{ macros.content(scope) }}
