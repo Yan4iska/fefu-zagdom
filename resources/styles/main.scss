@@ -7,10 +7,16 @@ $color-green: #029F59;
     @return $size / 16px * 1em;
 }
 
+@import "media.scss";
 @import "./uikit.scss";
 @import "../layouts/base.scss";
+
+// Components
 @import "../components/header/header.scss";
 @import "../components/footer/footer.scss";
+@import "../components/site-nav/site-nav.scss";
+
+// Elements
 @import "./elements.scss";
 body{
     font-family: 'Open Sans', sans-serif;

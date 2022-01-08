@@ -1,3 +1,5 @@
+@import "settings";
+
 // Your custom variables and variable overwrites
 $base-margin-vertical: 0;
 $base-heading-margin-top: 0;
@@ -17,9 +19,15 @@ $container-max-width: 1264px;
 $container-small-max-width: 780px;
 $container-xsmall-max-width: 720px;
 
-$container-padding-horizontal-m: 88px;
-$container-padding-horizontal-s: 32px;
+$container-padding-horizontal-m: 22px;
+$container-padding-horizontal-s: 16px;
 $container-padding-horizontal: 16px;
+
+$offcanvas-bar-background: hsl(153, 98%, 32%);
+
+ $global-inverse-color: white;
+
+ $inverse-global-color: $global-inverse-color;
 
 $button-primary-background: $color-green;
 $button-primary-color: white;
