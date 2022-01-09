@@ -1,32 +1,31 @@
+//Vatiables
 $color-black: black;
 $color-gray: #666666;
-$color-green--dark:#254741;
+$color-gray--light: #C6C6C6;
+$color-green--dark: #254741;
 $color-green: #029F59;
+$color-snow-drift: #F5F7F3;
 
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+//Functions
 @function toRem($size) {
-    @return $size / 16px * 1em;
+    @return $size / 16px* 1rem;
 }
 
-@import "media.scss";
+@import "./media.scss";
 @import "./uikit.scss";
 @import "../layouts/base.scss";
 
-// Components
-@import "../components/header/header.scss";
-@import "../components/footer/footer.scss";
-@import "../components/site-nav/site-nav.scss";
-
-// Elements
+//Elements
 @import "./elements.scss";
-body{
-    font-family: 'Open Sans', sans-serif;
-}
 
-.hello{
-    color: rgb(216, 3, 3);
-    font-family: 'Montserrat', sans-serif;
-}
-
-.lorem{
-    color: blue;
-}
+//Components
+@import "../components/featured-section/featured-section.scss";
+@import "../components/slider/slider.scss";
+@import "./swiper.scss";
+@import "../components/contacts/contacts.scss";
+@import "../components/header/header.scss";
+@import "../components/site-nav/site-nav.scss";
