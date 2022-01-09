@@ -2267,20 +2267,21 @@ select.uk-form-width-xsmall {
 /*
  * Secondary
  */
-.uk-button-secondary {
+.uk-button-secondary, .Button--secondary {
   background-color: #222;
   color: white;
 }
 
 /* Hover */
-.uk-button-secondary:hover {
+.uk-button-secondary:hover, .Button--secondary:hover {
   background-color: #151515;
   color: white;
 }
 
 /* OnClick + Active */
-.uk-button-secondary:active,
-.uk-button-secondary.uk-active {
+.uk-button-secondary:active, .Button--secondary:active,
+.uk-button-secondary.uk-active,
+.uk-active.Button--secondary {
   background-color: #090909;
   color: white;
 }
@@ -2314,6 +2315,7 @@ select.uk-form-width-xsmall {
 .uk-button-primary:disabled,
 .Button--primary:disabled,
 .uk-button-secondary:disabled,
+.Button--secondary:disabled,
 .uk-button-danger:disabled {
   background-color: #f8f8f8;
   color: #999;
@@ -11024,26 +11026,37 @@ iframe.uk-cover {
   background-color: #e6e6e6;
   color: #666;
 }
-.uk-light .uk-button-secondary, .uk-section-primary:not(.uk-preserve-color) .uk-button-secondary, .uk-section-secondary:not(.uk-preserve-color) .uk-button-secondary, .uk-tile-primary:not(.uk-preserve-color) .uk-button-secondary, .uk-tile-secondary:not(.uk-preserve-color) .uk-button-secondary, .uk-card-primary.uk-card-body .uk-button-secondary, .uk-card-primary > :not([class*=uk-card-media]) .uk-button-secondary, .uk-card-secondary.uk-card-body .uk-button-secondary, .uk-card-secondary > :not([class*=uk-card-media]) .uk-button-secondary, .uk-overlay-primary .uk-button-secondary, .uk-offcanvas-bar .uk-button-secondary {
+.uk-light .uk-button-secondary, .uk-light .Button--secondary, .uk-section-primary:not(.uk-preserve-color) .uk-button-secondary, .uk-section-primary:not(.uk-preserve-color) .Button--secondary, .uk-section-secondary:not(.uk-preserve-color) .uk-button-secondary, .uk-section-secondary:not(.uk-preserve-color) .Button--secondary, .uk-tile-primary:not(.uk-preserve-color) .uk-button-secondary, .uk-tile-primary:not(.uk-preserve-color) .Button--secondary, .uk-tile-secondary:not(.uk-preserve-color) .uk-button-secondary, .uk-tile-secondary:not(.uk-preserve-color) .Button--secondary, .uk-card-primary.uk-card-body .uk-button-secondary, .uk-card-primary.uk-card-body .Button--secondary, .uk-card-primary > :not([class*=uk-card-media]) .uk-button-secondary, .uk-card-primary > :not([class*=uk-card-media]) .Button--secondary, .uk-card-secondary.uk-card-body .uk-button-secondary, .uk-card-secondary.uk-card-body .Button--secondary, .uk-card-secondary > :not([class*=uk-card-media]) .uk-button-secondary, .uk-card-secondary > :not([class*=uk-card-media]) .Button--secondary, .uk-overlay-primary .uk-button-secondary, .uk-overlay-primary .Button--secondary, .uk-offcanvas-bar .uk-button-secondary, .uk-offcanvas-bar .Button--secondary {
   background-color: white;
   color: #666;
 }
-.uk-light .uk-button-secondary:hover, .uk-section-primary:not(.uk-preserve-color) .uk-button-secondary:hover, .uk-section-secondary:not(.uk-preserve-color) .uk-button-secondary:hover, .uk-tile-primary:not(.uk-preserve-color) .uk-button-secondary:hover, .uk-tile-secondary:not(.uk-preserve-color) .uk-button-secondary:hover, .uk-card-primary.uk-card-body .uk-button-secondary:hover, .uk-card-primary > :not([class*=uk-card-media]) .uk-button-secondary:hover, .uk-card-secondary.uk-card-body .uk-button-secondary:hover, .uk-card-secondary > :not([class*=uk-card-media]) .uk-button-secondary:hover, .uk-overlay-primary .uk-button-secondary:hover, .uk-offcanvas-bar .uk-button-secondary:hover {
+.uk-light .uk-button-secondary:hover, .uk-light .Button--secondary:hover, .uk-section-primary:not(.uk-preserve-color) .uk-button-secondary:hover, .uk-section-primary:not(.uk-preserve-color) .Button--secondary:hover, .uk-section-secondary:not(.uk-preserve-color) .uk-button-secondary:hover, .uk-section-secondary:not(.uk-preserve-color) .Button--secondary:hover, .uk-tile-primary:not(.uk-preserve-color) .uk-button-secondary:hover, .uk-tile-primary:not(.uk-preserve-color) .Button--secondary:hover, .uk-tile-secondary:not(.uk-preserve-color) .uk-button-secondary:hover, .uk-tile-secondary:not(.uk-preserve-color) .Button--secondary:hover, .uk-card-primary.uk-card-body .uk-button-secondary:hover, .uk-card-primary.uk-card-body .Button--secondary:hover, .uk-card-primary > :not([class*=uk-card-media]) .uk-button-secondary:hover, .uk-card-primary > :not([class*=uk-card-media]) .Button--secondary:hover, .uk-card-secondary.uk-card-body .uk-button-secondary:hover, .uk-card-secondary.uk-card-body .Button--secondary:hover, .uk-card-secondary > :not([class*=uk-card-media]) .uk-button-secondary:hover, .uk-card-secondary > :not([class*=uk-card-media]) .Button--secondary:hover, .uk-overlay-primary .uk-button-secondary:hover, .uk-overlay-primary .Button--secondary:hover, .uk-offcanvas-bar .uk-button-secondary:hover, .uk-offcanvas-bar .Button--secondary:hover {
   background-color: #f2f2f2;
   color: #666;
 }
-.uk-light .uk-button-secondary:active, .uk-section-primary:not(.uk-preserve-color) .uk-button-secondary:active, .uk-section-secondary:not(.uk-preserve-color) .uk-button-secondary:active, .uk-tile-primary:not(.uk-preserve-color) .uk-button-secondary:active, .uk-tile-secondary:not(.uk-preserve-color) .uk-button-secondary:active, .uk-card-primary.uk-card-body .uk-button-secondary:active, .uk-card-primary > :not([class*=uk-card-media]) .uk-button-secondary:active, .uk-card-secondary.uk-card-body .uk-button-secondary:active, .uk-card-secondary > :not([class*=uk-card-media]) .uk-button-secondary:active, .uk-overlay-primary .uk-button-secondary:active, .uk-offcanvas-bar .uk-button-secondary:active,
+.uk-light .uk-button-secondary:active, .uk-light .Button--secondary:active, .uk-section-primary:not(.uk-preserve-color) .uk-button-secondary:active, .uk-section-primary:not(.uk-preserve-color) .Button--secondary:active, .uk-section-secondary:not(.uk-preserve-color) .uk-button-secondary:active, .uk-section-secondary:not(.uk-preserve-color) .Button--secondary:active, .uk-tile-primary:not(.uk-preserve-color) .uk-button-secondary:active, .uk-tile-primary:not(.uk-preserve-color) .Button--secondary:active, .uk-tile-secondary:not(.uk-preserve-color) .uk-button-secondary:active, .uk-tile-secondary:not(.uk-preserve-color) .Button--secondary:active, .uk-card-primary.uk-card-body .uk-button-secondary:active, .uk-card-primary.uk-card-body .Button--secondary:active, .uk-card-primary > :not([class*=uk-card-media]) .uk-button-secondary:active, .uk-card-primary > :not([class*=uk-card-media]) .Button--secondary:active, .uk-card-secondary.uk-card-body .uk-button-secondary:active, .uk-card-secondary.uk-card-body .Button--secondary:active, .uk-card-secondary > :not([class*=uk-card-media]) .uk-button-secondary:active, .uk-card-secondary > :not([class*=uk-card-media]) .Button--secondary:active, .uk-overlay-primary .uk-button-secondary:active, .uk-overlay-primary .Button--secondary:active, .uk-offcanvas-bar .uk-button-secondary:active, .uk-offcanvas-bar .Button--secondary:active,
 .uk-light .uk-button-secondary.uk-active,
+.uk-light .uk-active.Button--secondary,
 .uk-section-primary:not(.uk-preserve-color) .uk-button-secondary.uk-active,
+.uk-section-primary:not(.uk-preserve-color) .uk-active.Button--secondary,
 .uk-section-secondary:not(.uk-preserve-color) .uk-button-secondary.uk-active,
+.uk-section-secondary:not(.uk-preserve-color) .uk-active.Button--secondary,
 .uk-tile-primary:not(.uk-preserve-color) .uk-button-secondary.uk-active,
+.uk-tile-primary:not(.uk-preserve-color) .uk-active.Button--secondary,
 .uk-tile-secondary:not(.uk-preserve-color) .uk-button-secondary.uk-active,
+.uk-tile-secondary:not(.uk-preserve-color) .uk-active.Button--secondary,
 .uk-card-primary.uk-card-body .uk-button-secondary.uk-active,
+.uk-card-primary.uk-card-body .uk-active.Button--secondary,
 .uk-card-primary > :not([class*=uk-card-media]) .uk-button-secondary.uk-active,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-active.Button--secondary,
 .uk-card-secondary.uk-card-body .uk-button-secondary.uk-active,
+.uk-card-secondary.uk-card-body .uk-active.Button--secondary,
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-button-secondary.uk-active,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-active.Button--secondary,
 .uk-overlay-primary .uk-button-secondary.uk-active,
-.uk-offcanvas-bar .uk-button-secondary.uk-active {
+.uk-overlay-primary .uk-active.Button--secondary,
+.uk-offcanvas-bar .uk-button-secondary.uk-active,
+.uk-offcanvas-bar .uk-active.Button--secondary {
   background-color: #e6e6e6;
   color: #666;
 }
@@ -11420,6 +11433,11 @@ h3 {
     page-break-after: avoid;
   }
 }
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
 .Layout {
   display: flex;
   flex-direction: column;
@@ -11452,6 +11470,15 @@ h3 {
     padding-bottom: 80px;
   }
 }
+.Layout__section--projects {
+  background-color: #F5F7F3;
+  padding: 92px 60px;
+}
+@media (max-width: 639px) {
+  .Layout__section--projects {
+    padding: 32px 16px;
+  }
+}
 
 .PrimaryPhone {
   display: flex;
@@ -11471,7 +11498,6 @@ h3 {
   padding-left: 16px;
   padding-right: 16px;
 }
-
 .FeaturedSection {
   display: flex;
   align-items: flex-end;
@@ -11655,6 +11681,207 @@ html:root {
 
 :root .swiper-horizontal > .swiper-pagination-bullets {
   bottom: 40px;
+}
+
+.ProjectsSection__title {
+  margin-bottom: 32px;
+  font-family: "Monserrat", sans-serif;
+  font-weight: bold;
+  font-size: 2.375rem;
+  line-height: 120%;
+}
+@media (max-width: 799px) {
+  .ProjectsSection__title {
+    font-size: 28px;
+  }
+}
+@media (max-width: 639px) {
+  .ProjectsSection__title {
+    margin-bottom: 24px;
+  }
+}
+.ProjectsSection__container {
+  display: grid;
+  grid-gap: 16px;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (max-width: 1023px) {
+  .ProjectsSection__container {
+    grid-gap: 0;
+    margin: 0 --16px;
+    display: flex;
+    padding-left: 16px;
+    overflow-x: auto;
+  }
+}
+.ProjectsSection__container::after {
+  content: "";
+  flex-shrink: 0;
+  flex-grow: 0;
+  width: 16px;
+}
+.ProjectsSection__item {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+  min-width: 150px;
+}
+@media (max-width: 1023px) {
+  .ProjectsSection__item {
+    flex-direction: column;
+    flex-shrink: 0;
+    max-width: 280px;
+    width: 80%;
+  }
+}
+.ProjectsSection__item:not(:last-child) {
+  margin-right: 16px;
+}
+.ProjectsSection__textBlock {
+  padding: 30px 16px 30px 30px;
+}
+@media (max-width: 639px) {
+  .ProjectsSection__textBlock {
+    padding: 20px 24px;
+  }
+}
+.ProjectsSection__itemTitle {
+  margin-bottom: 12px;
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 120%;
+}
+.ProjectsSection__itemDescription {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 135%;
+}
+.ProjectsSection__imageBlock {
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 1023px) {
+  .ProjectsSection__imageBlock {
+    order: -1;
+  }
+}
+@media (max-width: 639px) {
+  .ProjectsSection__imageBlock {
+    height: 150px;
+  }
+}
+
+.NewsList__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+@media (max-width: 639px) {
+  .NewsList__header {
+    margin-bottom: 24px;
+  }
+}
+@media (max-width: 449px) {
+  .NewsList__header {
+    flex-wrap: wrap;
+  }
+}
+.NewsList__title {
+  font-weight: 700;
+  font-size: 2.375rem;
+  line-height: 1.2;
+  color: black;
+  margin-right: 8px;
+}
+@media (max-width: 639px) {
+  .NewsList__title {
+    font-size: 1.75rem;
+  }
+}
+@media (max-width: 449px) {
+  .NewsList__title {
+    margin-bottom: 8px;
+  }
+}
+.NewsList__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 24px 16px;
+  list-style: none;
+}
+@media (max-width: 1023px) {
+  .NewsList__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 799px) {
+  .NewsList__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 639px) {
+  .NewsList__list {
+    display: flex;
+    grid-gap: 0;
+    margin: 0 -16px;
+    padding-left: 16px;
+    overflow-x: auto;
+  }
+  .NewsList__list::after {
+    content: "";
+    flex-shrink: 0;
+    flex-grow: 0;
+    width: 16px;
+  }
+}
+@media (max-width: 639px) {
+  .NewsList__item:not(:last-child) {
+    margin-right: 16px;
+  }
+}
+
+.NewsCard {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  line-height: 1.2;
+}
+@media (max-width: 639px) {
+  .NewsCard {
+    width: 344px;
+  }
+}
+@media (max-width: 449px) {
+  .NewsCard {
+    width: 288px;
+  }
+}
+.NewsCard__image {
+  height: 200px;
+  margin-bottom: 16px;
+  border-radius: 20px 20px 0 0;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.NewsCard__date {
+  margin-bottom: 16px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  color: black;
+}
+.NewsCard__title {
+  margin-bottom: 8px;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: black;
 }
 
 .ContactsSection {

@@ -23,9 +23,12 @@ $font-weight-bold: 700;
 @import "./elements.scss";
 
 //Components
+@import "./mixins.scss";
 @import "../components/featured-section/featured-section.scss";
 @import "../components/slider/slider.scss";
 @import "./swiper.scss";
+@import "../components/projects-section/projects-section.scss";
+@import "../components/news-list/news-list.scss";
 @import "../components/contacts/contacts.scss";
 @import "../components/header/header.scss";
 @import "../components/site-nav/site-nav.scss";

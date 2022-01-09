@@ -1,3 +1,8 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
 .Layout{
     display: flex;
     flex-direction: column;
@@ -19,11 +24,21 @@
             }
         }
 
-        &--featured {
+        &--featured{
             padding-y: 60px 120px;
 
             @include vw-sm-down {
                 padding-y: 40px 80px;
+            }
+        }
+        
+        &--projects {
+            background-color: $color-snow-drift;
+
+            padding: 92px 60px;
+
+            @include vw-sm-down {
+                padding: 32px 16px;
             }
         }    
     }
