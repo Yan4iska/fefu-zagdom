@@ -1,3 +1,99 @@
-.footer{
-    background-color: brown;
+.Footer {
+    padding-top: 40px;
+    padding-bottom: 30px;
+    background-color: $color-green--dark;
+
+    &__layout {
+        display: grid;
+        grid-template-areas: 
+            "logo nav contacts button"
+            "  .  nav contacts   .   "
+            "copyright links links links";
+        grid-template-columns: repeat(3, 1fr) 1.5fr;
+        gap: 32px 120px;
+
+        @include vw-xl-down {
+            column-gap: 60px;
+        }
+
+        @include vw-lg-down {
+            grid-template-areas:
+                "logo nav contacts"
+                "button nav contacts"
+                "copyright links links";
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include vw-sm-down {
+            grid-template-areas:
+                "logo"
+                "nav"
+                "contacts"
+                "button"
+                "copyright"
+                "links";
+            grid-template-columns: 1fr;
+            row-gap: 40px;
+            margin-left: 40px;
+        }
+    }
+
+    &__logo {
+        grid-area: logo;
+    }
+
+    &__nav {
+        grid-area: nav;
+    }
+
+    &__contacts {
+        grid-area: contacts;
+    }
+
+    &__feedbackButton {
+        grid-area: button;
+    }
+
+    &__copyright {
+        grid-area: copyright;
+    }
+
+    &__links {
+        grid-area: links;
+    }
+
+    &__link {
+        font-size: toRem(14px);
+        line-height: 1.2;
+        color: rgba($color: white, $alpha: 0.6);
+    }
+
+    a {
+        &:hover,
+        &:focus,
+        &:active {
+            color: white;
+        }
+    }
+}
+
+.FooterLinks {
+    list-style: none;
+    display: flex;
+
+    @include vw-sm-down {
+        flex-direction: column;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 100px;
+        }
+
+        
+        @include vw-sm-down {
+            margin-right: unset;
+            margin-bottom: 16px;
+        }
+    }
 }

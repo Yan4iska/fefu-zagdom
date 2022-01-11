@@ -11479,6 +11479,9 @@ body, html {
     padding: 32px 16px;
   }
 }
+.Layout__footer {
+  background-color: #254741;
+}
 
 .PrimaryPhone {
   display: flex;
@@ -11494,10 +11497,17 @@ body, html {
   margin-right: 8px;
 }
 
+.Button--primary {
+  background-color: #029F59;
+}
 .Button--icon {
   padding-left: 16px;
   padding-right: 16px;
 }
+.Button--secondary {
+  background-color: #029F59;
+}
+
 .FeaturedSection {
   display: flex;
   align-items: flex-end;
@@ -11979,6 +11989,83 @@ html:root {
   font-size: 0.875em;
 }
 
+.Footer {
+  padding-top: 40px;
+  padding-bottom: 30px;
+  background-color: #254741;
+}
+.Footer__layout {
+  display: grid;
+  grid-template-areas: "logo nav contacts button" "  .  nav contacts   .   " "copyright links links links";
+  grid-template-columns: repeat(3, 1fr) 1.5fr;
+  gap: 32px 120px;
+}
+@media (max-width: 1199px) {
+  .Footer__layout {
+    -moz-column-gap: 60px;
+         column-gap: 60px;
+  }
+}
+@media (max-width: 1023px) {
+  .Footer__layout {
+    grid-template-areas: "logo nav contacts" "button nav contacts" "copyright links links";
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 639px) {
+  .Footer__layout {
+    grid-template-areas: "logo" "nav" "contacts" "button" "copyright" "links";
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+    margin-left: 40px;
+  }
+}
+.Footer__logo {
+  grid-area: logo;
+}
+.Footer__nav {
+  grid-area: nav;
+}
+.Footer__contacts {
+  grid-area: contacts;
+}
+.Footer__feedbackButton {
+  grid-area: button;
+}
+.Footer__copyright {
+  grid-area: copyright;
+}
+.Footer__links {
+  grid-area: links;
+}
+.Footer__link {
+  font-size: 0.875rem;
+  line-height: 1.2;
+  color: rgba(255, 255, 255, 0.6);
+}
+.Footer a:hover, .Footer a:focus, .Footer a:active {
+  color: white;
+}
+
+.FooterLinks {
+  list-style: none;
+  display: flex;
+}
+@media (max-width: 639px) {
+  .FooterLinks {
+    flex-direction: column;
+  }
+}
+.FooterLinks__item:not(:last-child) {
+  margin-right: 100px;
+}
+@media (max-width: 639px) {
+  .FooterLinks__item {
+    margin-right: unset;
+    margin-bottom: 16px;
+  }
+}
+
 .SiteNav {
   display: flex;
   list-style: none;
@@ -11997,7 +12084,7 @@ html:root {
 }
 .SiteNav__item {
   line-height: 1.2;
-  color: #666666;
+  color: #ffff;
 }
 .SiteNav__item:hover, .SiteNav__item:focus, .SiteNav__item:active {
   color: black;

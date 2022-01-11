@@ -21,6 +21,7 @@
 
     &--primary {
         @extend .uk-button-primary;
+        background-color: #029F59;
     }
 
     &--icon {
@@ -29,5 +30,6 @@
 
     &--secondary {
         @extend .uk-button-secondary;
+        background-color: #029F59;
     }
 }

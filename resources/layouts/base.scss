@@ -42,6 +42,9 @@ body, html {
             }
         }    
     }
+    &__footer {
+        background-color: $color-green--dark;
+    }
 }
 
 .Container {
