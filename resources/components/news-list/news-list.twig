@@ -3,7 +3,7 @@
 {% set scope = {
     items: items ?? [],
 } %}
-
+{#}
 {% macro news(data) %}
     {% set data = {
         image: data.image ?? '',
@@ -30,7 +30,7 @@
             {{ text|raw }}
         </p>
     </article>
-{% endmacro %}
+{% endmacro %} #}
 
 {% macro content(scope) %}
     {% import _self as macros %}
@@ -40,14 +40,17 @@
             <h2 class="NewsList__title">
                 Новости
             </h2>
-            <a href="/" class="Button Button--secondary">
+            <a href="{{ route('news') }}" class="Button Button--secondary">
                 Все новости
             </a>
         </header>
         <ul class="NewsList__list">
             {% for item in scope.items %}
                 <li class="NewsList__item">
-                    {{ macros.news(item) }}
+                   {#} {{ macros.news(item) }}#}
+                   {% include "@components/news-card/news-card.twig" with {
+                       data: item,
+                   } %}
                 </li>
             {% endfor %}
         </ul>
